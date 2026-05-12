@@ -1,14 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import {
-  ArrowRight,
-  ChevronDown,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Star,
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import './styles.css';
 import financeTrackerImage from './assets/finance-tracker-live.png';
 import wildlifeDashboardImage from './assets/wildlife-dashboard.png';
@@ -47,20 +39,6 @@ const projects = [
     githubUrl: 'https://github.com/JohnnyvonH/autonomous-labs-local',
     variant: 'labs',
   },
-];
-
-const activity = [
-  ['Merged pull request #128', 'Improve transaction import performance', '2 days ago'],
-  ['Updated wildlife-camera-system', 'Dashboard screenshots and release documentation', 'Recently'],
-  ['Improved autonomous-labs-local', 'Telemetry dashboard, alerting, and CI checks', 'Recently'],
-  ['Published financial-tracker', 'React finance dashboard deployed through GitHub Pages', 'Recently'],
-];
-
-const repos = [
-  ['financial-tracker', 'JavaScript', 'Public', 'GitHub Pages'],
-  ['wildlife-camera-system', 'Python', 'Private', 'Dashboard'],
-  ['autonomous-labs-local', 'Python', 'Private', 'Lab platform'],
-  ['CANRaw', 'Python', 'Private', 'Vehicle data'],
 ];
 
 const experience = [
@@ -162,6 +140,8 @@ function App() {
         </a>
       </section>
 
+      <ExperienceSection />
+
       <section className="projects-section" id="projects">
         <div className="section-heading">
           <h2>Featured Projects</h2>
@@ -173,40 +153,6 @@ function App() {
           {projects.map((project) => (
             <ProjectFeature key={project.title} project={project} />
           ))}
-        </div>
-      </section>
-
-      <ExperienceSection />
-
-      <section className="activity-section" id="github">
-        <h2>Activity / Build Notes</h2>
-        <div className="activity-grid">
-          <div className="timeline">
-            {activity.map(([title, detail, time], index) => (
-              <article className="timeline-row" key={title}>
-                <span className="timeline-icon">{index + 1}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{detail}</p>
-                </div>
-                <time>{time}</time>
-              </article>
-            ))}
-          </div>
-          <div className="repo-table">
-            <h3>Recent Repositories</h3>
-            {repos.map(([name, language, visibility, focus]) => (
-              <div className="repo-row" key={name}>
-                <span>{name}</span>
-                <small>{language}</small>
-                <small><Star size={14} /> {visibility}</small>
-                <small>{focus}</small>
-              </div>
-            ))}
-            <a href="https://github.com/JohnnyvonH?tab=repositories" target="_blank" rel="noreferrer">
-              View all repositories on GitHub <ArrowRight size={16} />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -323,7 +269,7 @@ function ActivityCard() {
   return (
     <div className="activity-card">
       <div className="card-title">
-        <span>Activity Overview</span>
+        <span>Build Overview</span>
         <small>This week</small>
       </div>
       <div className="bars" aria-hidden="true">

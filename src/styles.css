@@ -270,7 +270,6 @@ a {
 
 .projects-section,
 .experience-section,
-.activity-section,
 .footer {
   padding: 58px 72px;
 }
@@ -383,10 +382,6 @@ h2 {
   object-position: top center;
 }
 
-.activity-section {
-  padding-top: 42px;
-}
-
 .experience-section {
   padding-top: 32px;
 }
@@ -480,82 +475,6 @@ h2 {
   line-height: 1.58;
 }
 
-.activity-section h2 {
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--line);
-}
-
-.activity-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
-  gap: 48px;
-  margin-top: 28px;
-}
-
-.timeline {
-  display: grid;
-  gap: 22px;
-}
-
-.timeline-row {
-  display: grid;
-  grid-template-columns: 44px 1fr auto;
-  gap: 18px;
-  align-items: start;
-}
-
-.timeline-icon {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  color: #fff;
-  font-weight: 820;
-  background: var(--teal);
-  border-radius: 50%;
-}
-
-.timeline-row h3,
-.repo-table h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.timeline-row p {
-  margin: 5px 0 0;
-  color: var(--muted);
-}
-
-.timeline-row time {
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.repo-table {
-  padding-left: 34px;
-  border-left: 1px solid var(--line);
-}
-
-.repo-row {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.45fr 0.55fr;
-  gap: 16px;
-  align-items: center;
-  min-height: 52px;
-  border-bottom: 1px solid var(--line);
-}
-
-.repo-row small {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  color: var(--muted);
-}
-
-.repo-table a {
-  margin-top: 22px;
-}
-
 .footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
@@ -600,7 +519,6 @@ h2 {
 
   .hero,
   .project-feature,
-  .activity-grid,
   .experience-card,
   .experience-compact,
   .footer {
@@ -619,14 +537,8 @@ h2 {
 
   .projects-section,
   .experience-section,
-  .activity-section,
   .footer {
     padding: 46px 28px;
-  }
-
-  .repo-table {
-    padding-left: 0;
-    border-left: 0;
   }
 }
 
@@ -703,24 +615,12 @@ h2 {
     min-height: 0;
   }
 
-  .repo-row {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .experience-card {
     padding: 24px;
   }
 
   .experience-detail ul {
     padding-left: 18px;
-  }
-
-  .timeline-row {
-    grid-template-columns: 38px 1fr;
-  }
-
-  .timeline-row time {
-    grid-column: 2;
   }
 
   .footer address {
