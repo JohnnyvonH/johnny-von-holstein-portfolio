@@ -173,7 +173,14 @@ function App() {
               Explore Projects
               <ArrowRight size={18} />
             </a>
-            <a className="button ghost" href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf" download>
+            <a
+              className="button ghost"
+              href="https://johnnyvonh.github.io/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf"
+              download="Johnny-von-Holstein-CV.pdf"
+              type="application/pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Download size={18} />
               Download CV
             </a>
@@ -225,7 +232,15 @@ function App() {
           <span><MapPin size={18} /> Remote / Warwickshire, UK</span>
           <a href="https://www.linkedin.com/in/johnny-v-330a45b2" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
           <a href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
-          <a href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf" download><Download size={18} /> Download CV</a>
+          <a
+            href="https://johnnyvonh.github.io/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf"
+            download="Johnny-von-Holstein-CV.pdf"
+            type="application/pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Download size={18} /> Download CV
+          </a>
         </address>
       </footer>
     </main>
