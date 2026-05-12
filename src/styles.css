@@ -270,6 +270,9 @@ a {
 
 .projects-section,
 .experience-section,
+.skills-section,
+.impact-section,
+.exploring-section,
 .footer {
   padding: 58px 72px;
 }
@@ -298,8 +301,7 @@ h2 {
 }
 
 .section-heading a,
-.project-copy a,
-.repo-table a {
+.project-copy a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -333,6 +335,43 @@ h2 {
   color: var(--muted);
   font-size: 1.06rem;
   line-height: 1.72;
+}
+
+.case-study {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.case-study h4 {
+  margin: 0 0 18px;
+  color: #18282d;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.case-study dl {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.case-study div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+}
+
+.case-study dt {
+  color: var(--teal-dark);
+  font-weight: 820;
+}
+
+.case-study dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.58;
 }
 
 .stack-list {
@@ -475,6 +514,86 @@ h2 {
   line-height: 1.58;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.skills-grid article,
+.impact-grid article {
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.skills-grid h3,
+.impact-grid h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.skills-grid .stack-list {
+  margin: 22px 0 0;
+}
+
+.impact-section {
+  padding-top: 28px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.impact-grid article {
+  min-height: 190px;
+  border-top: 4px solid var(--teal);
+}
+
+.impact-grid p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.exploring-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1fr);
+  gap: 54px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+}
+
+.exploring-section p {
+  margin: 22px 0 0;
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.exploring-section ul {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exploring-section li {
+  padding: 20px 22px;
+  color: #22363b;
+  font-weight: 690;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: 7px;
+}
+
 .footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
@@ -521,6 +640,9 @@ h2 {
   .project-feature,
   .experience-card,
   .experience-compact,
+  .skills-grid,
+  .impact-grid,
+  .exploring-section,
   .footer {
     grid-template-columns: 1fr;
   }
@@ -537,6 +659,9 @@ h2 {
 
   .projects-section,
   .experience-section,
+  .skills-section,
+  .impact-section,
+  .exploring-section,
   .footer {
     padding: 46px 28px;
   }
@@ -621,6 +746,11 @@ h2 {
 
   .experience-detail ul {
     padding-left: 18px;
+  }
+
+  .case-study div {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   .footer address {

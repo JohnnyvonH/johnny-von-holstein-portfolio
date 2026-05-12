@@ -1,6 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowRight, ChevronDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, ChevronDown, Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import './styles.css';
 import financeTrackerImage from './assets/finance-tracker-live.png';
 import wildlifeDashboardImage from './assets/wildlife-dashboard.png';
@@ -17,6 +17,11 @@ const projects = [
     image: financeTrackerImage,
     imageAlt: 'Finance Tracker dashboard screenshot',
     githubUrl: 'https://github.com/JohnnyvonH/financial-tracker',
+    caseStudy: {
+      problem: 'Personal finance data is easy to enter but hard to turn into useful habits.',
+      approach: 'Built a focused React dashboard with budget views, recurring transactions, reports, goals, and Supabase-backed sync.',
+      result: 'A published, installable finance workspace that demonstrates product thinking, frontend delivery, and data ownership.',
+    },
     variant: 'finance',
   },
   {
@@ -27,6 +32,11 @@ const projects = [
     image: wildlifeDashboardImage,
     imageAlt: 'Wildlife camera dashboard screenshot',
     githubUrl: 'https://github.com/JohnnyvonH/wildlife-camera-system',
+    caseStudy: {
+      problem: 'Wildlife camera data needs review, storage, camera health visibility, and repeatable monitoring workflows.',
+      approach: 'Created a Python dashboard around visits, feeder state, training data, backups, digest previews, and device health.',
+      result: 'A local-first monitoring system with clearer operational visibility and a stronger base for future computer vision work.',
+    },
     variant: 'wildlife',
   },
   {
@@ -37,6 +47,11 @@ const projects = [
     image: autonomousDashboardImage,
     imageAlt: 'Autonomous Labs dashboard screenshot',
     githubUrl: 'https://github.com/JohnnyvonH/autonomous-labs-local',
+    caseStudy: {
+      problem: 'Lab telemetry and multimodal data can fragment across files, tools, and alert channels.',
+      approach: 'Built a Flask and React platform for upload automation, live dashboards, WebSocket updates, anomaly detection, and Teams alerting.',
+      result: 'A practical lab operations platform that connects backend services, telemetry, neural network outputs, and engineer response loops.',
+    },
     variant: 'labs',
   },
 ];
@@ -100,6 +115,39 @@ const experience = [
   },
 ];
 
+const skillGroups = [
+  {
+    title: 'Backend & Integration',
+    skills: ['Python', 'Flask', 'REST APIs', 'SQL', 'System integration', 'Data pipelines'],
+  },
+  {
+    title: 'Frontend & Dashboards',
+    skills: ['React', 'Vite', 'Responsive UI', 'Dashboard design', 'Data visualization'],
+  },
+  {
+    title: 'Engineering Practice',
+    skills: ['Agile delivery', 'CI/CD', 'Testing', 'Linux', 'Documentation', 'Requirements analysis'],
+  },
+  {
+    title: 'Data & AI',
+    skills: ['Machine learning fundamentals', 'Neural networks', 'Telemetry', 'Automation', 'Anomaly detection'],
+  },
+];
+
+const impactItems = [
+  ['Creator of the Quarter', 'Recognised at Jaguar Land Rover for innovation, technical impact, and delivery of high-value engineering tools.'],
+  ['Regulated Engineering', 'Built software and test tooling in medical device and enterprise engineering environments where reliability matters.'],
+  ['Systems Mindset', 'Comfortable joining backend services, dashboards, data stores, test frameworks, and real-world engineering workflows.'],
+  ['First Class CS', 'BSc Computer Science with dissertation work focused on AI and algorithmic problem solving.'],
+];
+
+const exploringItems = [
+  'Autonomous systems and real-time engineering telemetry',
+  'Backend platforms that make test and validation data easier to trust',
+  'Applied AI and anomaly detection for practical engineering workflows',
+  'Personal finance tooling, clean dashboards, and user-owned data',
+];
+
 function App() {
   return (
     <main className="site-shell">
@@ -124,6 +172,10 @@ function App() {
               Explore Projects
               <ArrowRight size={18} />
             </a>
+            <a className="button ghost" href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.docx" download>
+              <Download size={18} />
+              Download CV
+            </a>
           </div>
           <div className="tech-strip" aria-label="Technology stack">
             {techLogos.map((logo) => (
@@ -142,6 +194,10 @@ function App() {
 
       <ExperienceSection />
 
+      <SkillsSection />
+
+      <ImpactSection />
+
       <section className="projects-section" id="projects">
         <div className="section-heading">
           <h2>Featured Projects</h2>
@@ -156,9 +212,11 @@ function App() {
         </div>
       </section>
 
+      <ExploringSection />
+
       <footer className="footer" id="contact">
         <div>
-          <h2>Let’s connect.</h2>
+          <h2>Let's connect.</h2>
           <p>Based in Warwickshire, UK and open to high-impact engineering roles and collaboration.</p>
         </div>
         <address>
@@ -166,6 +224,7 @@ function App() {
           <span><MapPin size={18} /> Remote</span>
           <a href="https://www.linkedin.com/in/johnny-v-330a45b2" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
           <a href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
+          <a href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.docx" download><Download size={18} /> Download CV</a>
         </address>
       </footer>
     </main>
@@ -221,17 +280,59 @@ function ExperienceSection() {
   );
 }
 
+function SkillsSection() {
+  return (
+    <section className="skills-section" id="skills">
+      <div className="section-heading">
+        <h2>Technical Skills</h2>
+        <p>A practical stack shaped around backend systems, dashboards, automation, and data visibility.</p>
+      </div>
+      <div className="skills-grid">
+        {skillGroups.map((group) => (
+          <article key={group.title}>
+            <h3>{group.title}</h3>
+            <div className="stack-list">
+              {group.skills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ImpactSection() {
+  return (
+    <section className="impact-section" id="impact">
+      <div className="section-heading">
+        <h2>Selected Impact</h2>
+        <p>Signals that connect the project work to real engineering environments.</p>
+      </div>
+      <div className="impact-grid">
+        {impactItems.map(([title, text]) => (
+          <article key={title}>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Header() {
   return (
     <header className="topbar">
       <a className="brand" href="#portfolio">Johnny von Holstein</a>
       <nav>
         <a href="#portfolio">Portfolio</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#github">GitHub</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+        <a href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer" aria-label="GitHub profile">
           <Github size={22} />
         </a>
       </nav>
@@ -301,6 +402,23 @@ function ProjectFeature({ project }) {
         <a href={project.githubUrl} target="_blank" rel="noreferrer">
           View GitHub <ArrowRight size={16} />
         </a>
+        <div className="case-study">
+          <h4>Case Study</h4>
+          <dl>
+            <div>
+              <dt>Problem</dt>
+              <dd>{project.caseStudy.problem}</dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>{project.caseStudy.approach}</dd>
+            </div>
+            <div>
+              <dt>Result</dt>
+              <dd>{project.caseStudy.result}</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </article>
   );
@@ -315,4 +433,24 @@ function ProjectMockup({ variant }) {
   );
 }
 
+function ExploringSection() {
+  return (
+    <section className="exploring-section" id="exploring">
+      <div>
+        <h2>Currently Exploring</h2>
+        <p>
+          The common thread is useful engineering software: tools that reduce friction, make
+          data visible, and help teams act with more confidence.
+        </p>
+      </div>
+      <ul>
+        {exploringItems.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 createRoot(document.getElementById('root')).render(<App />);
+
