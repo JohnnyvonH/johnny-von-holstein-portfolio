@@ -42,14 +42,14 @@ const projects = [
   {
     title: 'Autonomous Labs',
     description:
-      'A Flask-based lab platform for automated data upload, real-time monitoring, multimodal telemetry, anomaly detection, and Microsoft Teams alerting.',
+      'A Flask-based lab platform evolving into a command-center dashboard for rig status, alert review, live data, multimodal telemetry, and operator workflows.',
     stack: ['Python', 'Flask', 'React', 'WebSockets'],
     image: autonomousDashboardImage,
     imageAlt: 'Autonomous Labs dashboard screenshot',
     githubUrl: 'https://github.com/JohnnyvonH/autonomous-labs-local',
     caseStudy: {
       problem: 'Lab telemetry and multimodal data can fragment across files, tools, and alert channels.',
-      approach: 'Built a Flask and React platform for upload automation, live dashboards, WebSocket updates, anomaly detection, and Teams alerting.',
+      approach: 'Built a Flask and React platform with command-center views, live data pages, alert workflows, WebSocket updates, anomaly detection, and Teams alerting.',
       result: 'A practical lab operations platform that connects backend services, telemetry, neural network outputs, and engineer response loops.',
     },
     variant: 'labs',
@@ -145,6 +145,7 @@ const exploringItems = [
   'Autonomous systems and real-time engineering telemetry',
   'Backend platforms that make test and validation data easier to trust',
   'Applied AI and anomaly detection for practical engineering workflows',
+  'Tracking modern AI systems and agentic tooling, including OpenAI Codex, Claude, and Perplexity',
   'Personal finance tooling, clean dashboards, and user-owned data',
 ];
 
