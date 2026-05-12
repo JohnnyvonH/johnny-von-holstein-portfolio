@@ -64,10 +64,62 @@ const repos = [
 ];
 
 const experience = [
-  ['Jaguar Land Rover', 'Software Development and Systems Integration Specialist building Python automation, Flask APIs, and engineering workflow platforms.'],
-  ['Quanta Dialysis Technologies', 'Software engineer in a regulated medical device environment, developing internal tools, test automation, and reliability improvements.'],
-  ['Credit Suisse', 'Prime Financing IT experience across server environments, database support, QA environments, and .NET reporting systems.'],
-  ['Oxford Brookes University', 'BSc Computer Science, First Class Honours, with dissertation work focused on artificial intelligence and algorithmic problem solving.'],
+  {
+    company: 'Jaguar Land Rover',
+    role: 'Software Development and Systems Integration Specialist',
+    period: 'Sep 2024 - Present',
+    location: 'Gaydon, UK',
+    summary:
+      'Building Python-based automation, Flask APIs, and internal engineering platforms that support vehicle testing, validation, and data-driven workflows.',
+    bullets: [
+      'Develop backend services and REST APIs for ingesting, processing, and exposing structured engineering and test data.',
+      'Integrate internal tools, test frameworks, and analysis platforms so engineering teams can trust the flow of data across systems.',
+      'Improve automation, data consistency, and interoperability across validation workflows, reducing manual effort and strengthening confidence in results.',
+      'Awarded Creator of the Quarter within the first year for innovation, technical impact, and delivery of high-value engineering solutions.',
+    ],
+    stack: ['Python', 'Flask', 'REST APIs', 'Linux', 'Agile'],
+    featured: true,
+  },
+  {
+    company: 'Quanta Dialysis Technologies',
+    role: 'Software Engineer',
+    period: 'Aug 2022 - Sep 2024',
+    location: 'Alcester, UK',
+    summary:
+      'Worked across embedded software and software testing in a regulated medical device environment, building tools that improved engineering efficiency and reliability.',
+    bullets: [
+      'Developed internal software tools for test workflow automation, error detection, and process improvements.',
+      'Contributed to the development, validation, and maintenance of dialysis machine software.',
+      'Delivered technical presentations in Agile ceremonies and helped translate findings into practical development plans.',
+      'Mentored new engineering team members and supported knowledge transfer across the software function.',
+    ],
+    stack: ['C', 'C++', 'C#', 'Testing', 'Regulated software'],
+    featured: true,
+  },
+  {
+    company: 'Quanta Dialysis Technologies',
+    role: 'Software Engineering Intern',
+    period: 'Sep 2020 - Sep 2021',
+    location: 'Alcester, UK',
+    summary:
+      'Placement year focused on internal APIs, dashboards, testing processes, and safety-critical development practices.',
+  },
+  {
+    company: 'Credit Suisse',
+    role: 'Prime Financing IT - Internship & Work Experience',
+    period: '2019 - 2020',
+    location: 'London, UK',
+    summary:
+      'Supported server and database environments, security configurations, QA environments, and .NET reporting systems.',
+  },
+  {
+    company: 'Oxford Brookes University',
+    role: 'BSc Computer Science, First Class Honours',
+    period: '2018 - 2022',
+    location: 'Oxford, UK',
+    summary:
+      'Dissertation focused on artificial intelligence and algorithmic problem solving.',
+  },
 ];
 
 function App() {
@@ -124,15 +176,9 @@ function App() {
         </div>
       </section>
 
+      <ExperienceSection />
+
       <section className="activity-section" id="github">
-        <div className="experience-strip" aria-label="Experience highlights">
-          {experience.map(([company, detail]) => (
-            <article key={company}>
-              <h3>{company}</h3>
-              <p>{detail}</p>
-            </article>
-          ))}
-        </div>
         <h2>Activity / Build Notes</h2>
         <div className="activity-grid">
           <div className="timeline">
@@ -180,6 +226,55 @@ function App() {
   );
 }
 
+function ExperienceSection() {
+  const featured = experience.filter((item) => item.featured);
+  const compact = experience.filter((item) => !item.featured);
+
+  return (
+    <section className="experience-section" id="experience">
+      <div className="section-heading">
+        <h2>Work History</h2>
+        <p>Backend systems, regulated engineering, and applied software delivery.</p>
+      </div>
+      <div className="experience-featured">
+        {featured.map((item) => (
+          <article className="experience-card" key={item.company}>
+            <div className="experience-meta">
+              <h3>{item.company}</h3>
+              <p>{item.role}</p>
+              <span>{item.period}</span>
+              <span>{item.location}</span>
+            </div>
+            <div className="experience-detail">
+              <p>{item.summary}</p>
+              <ul>
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+              <div className="stack-list">
+                {item.stack.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div className="experience-compact">
+        {compact.map((item) => (
+          <article key={`${item.company}-${item.role}`}>
+            <h3>{item.company}</h3>
+            <p>{item.role}</p>
+            <span>{item.period}</span>
+            <small>{item.summary}</small>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Header() {
   return (
     <header className="topbar">
@@ -187,6 +282,7 @@ function Header() {
       <nav>
         <a href="#portfolio">Portfolio</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#github">GitHub</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub profile">

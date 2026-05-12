@@ -269,6 +269,7 @@ a {
 }
 
 .projects-section,
+.experience-section,
 .activity-section,
 .footer {
   padding: 58px 72px;
@@ -281,6 +282,13 @@ a {
   gap: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
+}
+
+.section-heading p {
+  max-width: 430px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 h2 {
@@ -376,35 +384,100 @@ h2 {
 }
 
 .activity-section {
+  padding-top: 42px;
+}
+
+.experience-section {
   padding-top: 32px;
 }
 
-.experience-strip {
+.experience-featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.55fr) minmax(0, 1.45fr);
+  gap: 36px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  box-shadow: 0 16px 42px rgba(8, 19, 23, 0.06);
+}
+
+.experience-meta h3,
+.experience-compact h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.experience-meta p {
+  margin: 14px 0 0;
+  color: var(--teal-dark);
+  font-weight: 780;
+  line-height: 1.45;
+}
+
+.experience-meta span,
+.experience-compact span {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.experience-detail p {
+  margin: 0;
+  color: #25373c;
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.experience-detail ul {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.experience-detail li::marker {
+  color: var(--teal);
+}
+
+.experience-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  margin-bottom: 52px;
+  margin-top: 28px;
   background: var(--line);
   border: 1px solid var(--line);
 }
 
-.experience-strip article {
-  min-height: 190px;
+.experience-compact article {
+  min-height: 188px;
   padding: 24px;
   background: rgba(255, 255, 255, 0.84);
 }
 
-.experience-strip h3 {
-  margin: 0;
-  font-size: 1.04rem;
-  line-height: 1.25;
+.experience-compact p {
+  margin: 12px 0 0;
+  color: var(--teal-dark);
+  font-weight: 730;
+  line-height: 1.45;
 }
 
-.experience-strip p {
-  margin: 14px 0 0;
+.experience-compact small {
+  display: block;
+  margin-top: 14px;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.62;
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
 .activity-section h2 {
@@ -528,7 +601,8 @@ h2 {
   .hero,
   .project-feature,
   .activity-grid,
-  .experience-strip,
+  .experience-card,
+  .experience-compact,
   .footer {
     grid-template-columns: 1fr;
   }
@@ -544,6 +618,7 @@ h2 {
   }
 
   .projects-section,
+  .experience-section,
   .activity-section,
   .footer {
     padding: 46px 28px;
@@ -567,8 +642,8 @@ h2 {
   .topbar nav {
     justify-content: flex-end;
     flex-wrap: wrap;
-    font-size: 0.86rem;
-    gap: 0.85rem;
+    font-size: 0.82rem;
+    gap: 0.7rem;
   }
 
   .hero-copy h1 {
@@ -630,6 +705,14 @@ h2 {
 
   .repo-row {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-detail ul {
+    padding-left: 18px;
   }
 
   .timeline-row {
