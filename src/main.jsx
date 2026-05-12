@@ -173,7 +173,7 @@ function App() {
               Explore Projects
               <ArrowRight size={18} />
             </a>
-            <a className="button ghost" href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.docx" download>
+            <a className="button ghost" href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf" download>
               <Download size={18} />
               Download CV
             </a>
@@ -218,14 +218,14 @@ function App() {
       <footer className="footer" id="contact">
         <div>
           <h2>Let's connect.</h2>
-          <p>Based in Warwickshire, UK and open to high-impact engineering roles and collaboration.</p>
+          <p>Remote / Warwickshire, UK. Open to high-impact engineering roles and collaboration.</p>
         </div>
         <address>
           <a href="mailto:johnnyvonh@gmail.com"><Mail size={18} /> johnnyvonh@gmail.com</a>
-          <span><MapPin size={18} /> Remote</span>
+          <span><MapPin size={18} /> Remote / Warwickshire, UK</span>
           <a href="https://www.linkedin.com/in/johnny-v-330a45b2" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
           <a href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
-          <a href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.docx" download><Download size={18} /> Download CV</a>
+          <a href="/johnny-von-holstein-portfolio/johnny-von-holstein-cv.pdf" download><Download size={18} /> Download CV</a>
         </address>
       </footer>
     </main>
