@@ -161,8 +161,8 @@ function App() {
           </h1>
           <p className="lead">Selected work in product, data, and automation.</p>
           <p className="intro">
-            Software engineer and systems integration specialist building Python backend services,
-            Flask APIs, React dashboards, and data-driven engineering tools.
+            Backend software engineer building Python services, Flask APIs, React dashboards, and
+            data-driven engineering tools for testing, validation, and automation workflows.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer">
@@ -225,11 +225,11 @@ function App() {
       <footer className="footer" id="contact">
         <div>
           <h2>Let's connect.</h2>
-          <p>Remote / Warwickshire, UK. Open to high-impact engineering roles and collaboration.</p>
+          <p>Warwickshire, UK. Open to remote, hybrid, and MENA-based engineering roles.</p>
         </div>
         <address>
           <a href="mailto:johnnyvonh@gmail.com"><Mail size={18} /> johnnyvonh@gmail.com</a>
-          <span><MapPin size={18} /> Remote / Warwickshire, UK</span>
+          <span><MapPin size={18} /> Warwickshire, UK / Remote</span>
           <a href="https://www.linkedin.com/in/johnny-v-330a45b2" target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
           <a href="https://github.com/JohnnyvonH" target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
           <a
