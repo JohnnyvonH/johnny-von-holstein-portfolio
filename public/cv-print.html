@@ -19,18 +19,17 @@
         color: #101719;
         background: #eef3f3;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 10.5pt;
-        line-height: 1.42;
+        font-size: 9.35pt;
+        line-height: 1.35;
       }
 
       .page {
         width: 210mm;
         min-height: 297mm;
+        margin: 0 auto;
+        padding: 12.5mm 14mm 11mm;
+        background: #ffffff;
         page-break-after: always;
-        padding: 18mm 18mm 16mm;
-        background:
-          linear-gradient(90deg, rgba(6, 123, 124, 0.08) 0 1px, transparent 1px) 0 0 / 18mm 18mm,
-          #ffffff;
       }
 
       .page:last-child {
@@ -39,10 +38,10 @@
 
       header {
         display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 18mm;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12mm;
         align-items: start;
-        padding-bottom: 7mm;
+        padding-bottom: 4.5mm;
         border-bottom: 1px solid #d7e2e2;
       }
 
@@ -55,85 +54,106 @@
       }
 
       h1 {
-        margin-bottom: 2mm;
-        font-size: 30pt;
-        line-height: 0.95;
+        margin-bottom: 1.5mm;
+        font-size: 24pt;
+        line-height: 1;
         letter-spacing: 0;
       }
 
       h2 {
-        margin-bottom: 8mm;
-        font-size: 22pt;
-        line-height: 1.05;
-      }
-
-      h3 {
-        margin-bottom: 2mm;
-        font-size: 13pt;
-        line-height: 1.2;
-      }
-
-      .role {
+        margin: 0 0 3.4mm;
         color: #067b7c;
-        font-size: 12.5pt;
-        font-weight: 700;
-      }
-
-      .contact {
-        color: #4d5f65;
-        font-size: 9pt;
-        line-height: 1.6;
-        text-align: right;
-      }
-
-      .section-kicker {
-        margin-bottom: 3mm;
-        color: #067b7c;
-        font-size: 8pt;
-        font-weight: 700;
+        font-size: 8.2pt;
+        font-weight: 800;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
+      h3 {
+        margin: 0;
+        font-size: 11pt;
+        line-height: 1.18;
+      }
+
+      .role {
+        color: #067b7c;
+        font-size: 11.4pt;
+        font-weight: 800;
+      }
+
+      .contact {
+        color: #4d5f65;
+        font-size: 8.2pt;
+        line-height: 1.45;
+        text-align: right;
+        white-space: nowrap;
+      }
+
       .summary {
-        max-width: 162mm;
-        margin-top: 9mm;
+        margin: 5mm 0 0;
         color: #2c3c42;
-        font-size: 12pt;
-        line-height: 1.55;
+        font-size: 10.25pt;
+        line-height: 1.48;
       }
 
-      .grid {
+      .section {
+        margin-top: 6mm;
+      }
+
+      .skills {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 32mm 1fr;
+        gap: 2.2mm 5mm;
+        margin: 0;
+      }
+
+      .skills dt {
+        color: #073f43;
+        font-weight: 800;
+      }
+
+      .skills dd {
+        margin: 0;
+        color: #304348;
+      }
+
+      .item {
+        padding: 4.2mm 0;
+        border-top: 1px solid #d7e2e2;
+      }
+
+      .item:first-of-type {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .item-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 6mm;
-        margin-top: 10mm;
+        align-items: baseline;
       }
 
-      .card {
-        padding: 5mm;
-        background: rgba(246, 251, 251, 0.94);
-        border: 1px solid #d7e2e2;
-        border-top: 3px solid #067b7c;
-      }
-
-      .card p,
-      .item p {
-        margin-bottom: 0;
-        color: #506167;
-      }
-
+      .item-head p,
+      .project-meta,
       .meta {
-        margin-bottom: 5mm;
+        margin: 1.1mm 0 0;
         color: #506167;
-        font-size: 9.3pt;
+        font-size: 8.45pt;
+      }
+
+      .dates {
+        color: #506167;
+        font-size: 8.4pt;
+        text-align: right;
+        white-space: nowrap;
       }
 
       ul {
         display: grid;
-        gap: 2.8mm;
-        margin-bottom: 7mm;
-        padding-left: 5mm;
+        gap: 1.3mm;
+        margin: 2.8mm 0 0;
+        padding-left: 4.5mm;
         color: #304348;
       }
 
@@ -144,32 +164,18 @@
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 2.5mm;
-        margin-top: 5mm;
+        gap: 1.7mm;
+        margin-top: 3mm;
       }
 
       .tags span {
-        padding: 1.7mm 2.6mm;
+        padding: 1.1mm 2mm;
         color: #073f43;
         background: #eaf6f6;
         border: 1px solid #cce4e4;
-        border-radius: 2mm;
-        font-size: 8.2pt;
-        font-weight: 700;
-      }
-
-      .item {
-        padding: 5mm 0;
-        border-top: 1px solid #d7e2e2;
-      }
-
-      .item:first-of-type {
-        border-top: 0;
-      }
-
-      .compact-list {
-        display: grid;
-        gap: 5mm;
+        border-radius: 1.5mm;
+        font-size: 7.4pt;
+        font-weight: 800;
       }
 
       .two-col {
@@ -178,11 +184,62 @@
         gap: 7mm;
       }
 
-      .footer-note {
-        margin-top: 10mm;
-        padding-top: 5mm;
-        color: #506167;
+      .projects {
+        display: grid;
+        gap: 3.6mm;
+      }
+
+      .project {
+        padding-top: 3.6mm;
         border-top: 1px solid #d7e2e2;
+      }
+
+      .project:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .project p {
+        margin: 1.6mm 0 0;
+        color: #304348;
+      }
+
+      .compact p {
+        margin-bottom: 1.8mm;
+        color: #304348;
+      }
+
+      .note {
+        margin-top: 4.5mm;
+        padding: 3.2mm 4mm;
+        color: #23383d;
+        background: #f4fafa;
+        border-left: 3px solid #067b7c;
+      }
+
+      @media screen {
+        body {
+          padding: 18px 0;
+        }
+
+        .page {
+          box-shadow: 0 18px 50px rgba(5, 20, 24, 0.14);
+        }
+
+        .page + .page {
+          margin-top: 18px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
       }
     </style>
   </head>
@@ -191,154 +248,159 @@
       <header>
         <div>
           <h1>Johnny von Holstein</h1>
-          <div class="role">Software Engineer | System Integration & Backend Systems</div>
+          <div class="role">Backend Software Engineer</div>
         </div>
         <div class="contact">
           Warwickshire, UK<br />
           Open to Remote / MENA roles<br />
           johnnyvonh@gmail.com<br />
           linkedin.com/in/johnny-v-330a45b2<br />
-          github.com/JohnnyvonH
+          github.com/JohnnyvonH<br />
+          johnnyvonh.github.io/johnny-von-holstein-portfolio
         </div>
       </header>
 
-      <p class="section-kicker">Professional Summary</p>
       <p class="summary">
-        Software Engineer and System Integration Specialist with over five years of combined
-        professional and industrial placement experience delivering backend services, integrated
-        systems, and data-driven engineering tools in regulated and enterprise-scale environments.
-        Currently working at Jaguar Land Rover, developing Python-based automation, Flask APIs, and
-        internal platforms that support vehicle testing, validation, and engineering workflows.
+        Software engineer specialising in Python backend systems, Flask APIs, automation, and
+        systems integration. Experienced in regulated engineering environments across automotive
+        and medical devices, with a track record of building internal tools, data pipelines, and
+        dashboards that improve testing, validation, and engineering decision-making.
       </p>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Backend & Integration</h3>
-          <p>Python, Flask, REST APIs, SQL, Linux, data pipelines, and system integration.</p>
-        </article>
-        <article class="card">
-          <h3>Engineering Practice</h3>
-          <p>Agile delivery, CI/CD, automation, software testing, requirements analysis, and documentation.</p>
-        </article>
-        <article class="card">
-          <h3>Frontend & Dashboards</h3>
-          <p>React dashboards, internal platforms, data visibility, and operational tooling.</p>
-        </article>
-        <article class="card">
-          <h3>Data & AI</h3>
-          <p>Machine learning fundamentals, neural networks, reinforcement learning, and anomaly detection.</p>
-        </article>
-      </div>
+      <section class="section">
+        <h2>Core Technologies</h2>
+        <dl class="skills">
+          <dt>Backend</dt>
+          <dd>Python, Flask, REST APIs, SQL, data pipelines, automation, system integration</dd>
+          <dt>Frontend</dt>
+          <dd>React, Vite, JavaScript, dashboard design, responsive UI, data visualisation</dd>
+          <dt>Engineering</dt>
+          <dd>Linux, Git, CI/CD, Docker, software testing, Agile delivery, documentation</dd>
+          <dt>Data & AI</dt>
+          <dd>Telemetry, anomaly detection, machine learning fundamentals, neural networks</dd>
+        </dl>
+      </section>
 
-      <p class="footer-note">
-        Selected achievement: Creator of the Quarter at Jaguar Land Rover for innovation, technical
-        impact, and delivery of high-value engineering solutions.
-      </p>
-    </section>
-
-    <section class="page">
-      <p class="section-kicker">Professional Experience</p>
-      <h2>Jaguar Land Rover</h2>
-      <h3>Software Development and Systems Integration Specialist</h3>
-      <p class="meta">Sep 2024 - Present | Gaydon, UK (Hybrid)</p>
-      <ul>
-        <li>Design, develop, and integrate Python-based backend systems supporting vehicle testing, validation, and engineering workflows.</li>
-        <li>Build and maintain Flask-based server components and RESTful APIs used to ingest, process, and expose structured engineering and test data.</li>
-        <li>Act as system integration specialist, ensuring reliable communication and data flow between internal tools, testing frameworks, and analysis platforms.</li>
-        <li>Collaborate with test engineers, systems engineers, and analysts to translate complex requirements into maintainable, production-ready software.</li>
-        <li>Improve automation, data consistency, and system interoperability, reducing manual effort and increasing confidence in test and validation results.</li>
-        <li>Contribute within Agile delivery frameworks, supporting sprint planning, reviews, and continuous improvement initiatives.</li>
-        <li>Awarded Creator of the Quarter within first year at JLR for innovation, technical impact, and delivery of high-value engineering solutions.</li>
-      </ul>
-      <div class="tags">
-        <span>Python</span><span>Flask</span><span>REST APIs</span><span>Data pipelines</span><span>Linux</span><span>Agile</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <p class="section-kicker">Professional Experience</p>
-      <h2>Quanta Dialysis Technologies</h2>
-      <div class="item">
-        <h3>Software Engineer</h3>
-        <p class="meta">Aug 2022 - Sep 2024 | Alcester, UK</p>
-        <ul>
-          <li>Worked within embedded software and software testing teams in a highly regulated medical device environment.</li>
-          <li>Developed internal software tools to improve engineering efficiency, system reliability, and process automation.</li>
-          <li>Introduced automation features that reduced manual workload and improved error detection across test workflows.</li>
-          <li>Contributed to the development, validation, and maintenance of dialysis machine software.</li>
-          <li>Delivered regular technical presentations covering findings, system improvements, and development plans in an Agile format.</li>
-          <li>Trained and mentored new team members joining the engineering function.</li>
-        </ul>
-      </div>
-      <div class="item">
-        <h3>Software Engineering Intern</h3>
-        <p class="meta">Sep 2020 - Sep 2021 | Alcester, UK</p>
-        <ul>
-          <li>Researched and developed internal APIs and dashboards to support engineering and testing teams.</li>
-          <li>Improved in-house testing processes and error detection tooling, helping to reduce regression issues.</li>
-          <li>Gained exposure to VectorCast, safety-critical development practices, and regulatory documentation.</li>
-        </ul>
-      </div>
-      <div class="tags">
-        <span>C</span><span>C++</span><span>C#</span><span>Software testing</span><span>Safety-critical practices</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <p class="section-kicker">Projects</p>
-      <h2>Selected Technical Projects</h2>
-      <div class="compact-list">
+      <section class="section">
+        <h2>Professional Experience</h2>
         <article class="item">
-          <h3>Autonomous Monitoring & Alerting System</h3>
-          <p class="meta">Python | Flask | WebSockets | React | SQL | Docker</p>
-          <p>Built an autonomous monitoring platform that ingests telemetry from distributed services, stores events in a central SQL database, and exposes real-time status via a React frontend.</p>
-          <p>Implemented WebSocket-based live updates, alert rules, and audit trails, enabling engineers to understand system health and alert context without manual log digging.</p>
+          <div class="item-head">
+            <div>
+              <h3>Software Development and Systems Integration Specialist</h3>
+              <p class="meta">Jaguar Land Rover | Gaydon, UK (Hybrid)</p>
+            </div>
+            <div class="dates">Sep 2024 - Present</div>
+          </div>
+          <ul>
+            <li>Awarded Creator of the Quarter within first year for innovation, technical impact, and delivery of high-value engineering tools.</li>
+            <li>Design and develop Python-based backend systems supporting vehicle testing, validation, and engineering workflows.</li>
+            <li>Build Flask server components and REST APIs that ingest, process, and expose structured engineering and test data.</li>
+            <li>Integrate internal tools, testing frameworks, and analysis platforms to improve data flow and interoperability across validation workflows.</li>
+            <li>Translate complex requirements from test engineers, systems engineers, and analysts into maintainable production-ready software.</li>
+            <li>Improve automation and data consistency, reducing manual effort and increasing confidence in test and validation results.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>Flask</span><span>REST APIs</span><span>Data pipelines</span><span>Linux</span><span>Agile</span>
+          </div>
         </article>
+
         <article class="item">
-          <h3>Personal Finance Tracker</h3>
-          <p class="meta">Python | Flask | React | REST APIs | SQL</p>
-          <p>Developed a full-stack personal finance application to track income, expenses, categories, and monthly trends using a Flask API and React UI.</p>
-          <p>Designed backend schema and REST endpoints to support filtering, aggregation, and time-series views of financial data.</p>
+          <div class="item-head">
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="meta">Quanta Dialysis Technologies | Alcester, UK</p>
+            </div>
+            <div class="dates">Aug 2022 - Sep 2024</div>
+          </div>
+          <ul>
+            <li>Worked across embedded software and software testing teams in a highly regulated medical device environment.</li>
+            <li>Developed internal engineering tools for test workflow automation, error detection, reliability improvements, and process efficiency.</li>
+            <li>Contributed to the development, validation, and maintenance of dialysis machine software using safety-critical engineering practices.</li>
+            <li>Delivered technical presentations covering findings, software improvements, and development plans in Agile ceremonies.</li>
+            <li>Mentored new team members joining the engineering function and supported knowledge transfer across the software team.</li>
+          </ul>
+          <div class="tags">
+            <span>C</span><span>C++</span><span>C#</span><span>Software testing</span><span>VectorCast</span><span>Regulated software</span>
+          </div>
         </article>
-        <article class="item">
-          <h3>Flask-Based Data & Telemetry Server</h3>
-          <p class="meta">Python | Flask | REST APIs | Data Processing</p>
-          <p>Designed a Flask-based backend server to ingest, store, and serve structured and time-series data for internal analysis tools, automation triggers, and system integration.</p>
-        </article>
-      </div>
+      </section>
     </section>
 
     <section class="page">
-      <p class="section-kicker">Additional Experience & Education</p>
-      <div class="two-col">
-        <div>
-          <h2>Credit Suisse</h2>
-          <h3>Prime Financing IT - Internship & Work Experience</h3>
-          <p class="meta">2019 - 2020</p>
-          <p>Supported server and database environments, security configurations, QA environments, and .NET reporting systems.</p>
-          <p>Gained exposure to large-scale financial systems, change control, and production-support processes.</p>
+      <section class="section" style="margin-top: 0">
+        <h2>Earlier Experience</h2>
+        <article class="item">
+          <div class="item-head">
+            <div>
+              <h3>Software Engineering Intern</h3>
+              <p class="meta">Quanta Dialysis Technologies | Alcester, UK</p>
+            </div>
+            <div class="dates">Sep 2020 - Sep 2021</div>
+          </div>
+          <ul>
+            <li>Researched and developed internal APIs and dashboards to support engineering and testing teams.</li>
+            <li>Improved in-house testing processes and error detection tooling, helping reduce regression risk.</li>
+            <li>Gained exposure to VectorCast, safety-critical development practices, and regulatory documentation.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+            <div>
+              <h3>Prime Financing IT - Internship & Work Experience</h3>
+              <p class="meta">Credit Suisse | London, UK</p>
+            </div>
+            <div class="dates">2019 - 2020</div>
+          </div>
+          <ul>
+            <li>Supported server and database environments, security configurations, QA environments, and .NET reporting systems.</li>
+            <li>Gained exposure to large-scale financial systems, change control, and production-support processes.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Selected Technical Projects</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Autonomous Monitoring & Alerting System</h3>
+            <p class="project-meta">Python | Flask | WebSockets | React | SQL | Docker</p>
+            <p>Built a Flask and React telemetry platform with WebSocket live updates, SQL-backed event storage, alert rules, and audit trails to simulate real-time engineering monitoring workflows.</p>
+          </article>
+
+          <article class="project">
+            <h3>Wildlife Camera System</h3>
+            <p class="project-meta">Python | Flask | Dashboard UI | Testing</p>
+            <p>Created a local-first monitoring dashboard for camera health, visit review, feeder state, weekly digests, training data, backups, and device operations.</p>
+          </article>
+
+          <article class="project">
+            <h3>Personal Finance Tracker</h3>
+            <p class="project-meta">React | Vite | Supabase | GitHub Pages</p>
+            <p>Developed a published personal finance application for income, expenses, budgets, recurring transactions, savings goals, reports, and cloud-backed data sync.</p>
+          </article>
         </div>
-        <div>
+      </section>
+
+      <section class="section two-col">
+        <div class="compact">
           <h2>Education</h2>
           <h3>Oxford Brookes University</h3>
           <p class="meta">BSc Computer Science, First Class Honours | 2018 - 2022</p>
           <p>Dissertation focused on artificial intelligence and algorithmic problem solving.</p>
         </div>
-      </div>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Achievements</h3>
-          <p>Creator of the Quarter - Jaguar Land Rover</p>
-          <p>Captain, Warwick School Clay Pigeon Shooting Team; national and regional competition winner</p>
-          <p>Maths Challenge - Silver Award</p>
-          <p>Duke of Edinburgh Bronze Award</p>
-        </article>
-        <article class="card">
-          <h3>Interests</h3>
-          <p>Backend systems, data automation, travel, skiing, music, competitive gaming, learning German, and personal finance.</p>
-        </article>
-      </div>
+        <div class="compact">
+          <h2>Recognition & Interests</h2>
+          <p><strong>Recognition:</strong> Creator of the Quarter - Jaguar Land Rover.</p>
+          <p><strong>Interests:</strong> backend systems, engineering telemetry, applied AI, automation, skiing, music, German, and personal finance.</p>
+        </div>
+      </section>
+
+      <p class="note">
+        Practical focus: backend platforms and integration tooling that make engineering data easier
+        to trust, test workflows easier to run, and operational decisions easier to make.
+      </p>
     </section>
   </body>
 </html>
