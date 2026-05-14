@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, Download, Github, Linkedin, Mail, MapPin } fro
 import './styles.css';
 import financeTrackerImage from './assets/finance-tracker-dashboard.png';
 import wildlifeDashboardImage from './assets/wildlife-dashboard.png';
-import autonomousDashboardImage from './assets/autonomous-dashboard.png';
+import autonomousDashboardImage from './assets/autonomous-labs-home.png';
 
 const techLogos = ['Py', 'Fl', 'Re', 'SQL', 'API', 'CI'];
 
@@ -45,7 +45,7 @@ const projects = [
       'A Flask-based lab platform evolving into a command-center dashboard for rig status, alert review, live data, multimodal telemetry, and operator workflows.',
     stack: ['Python', 'Flask', 'React', 'WebSockets'],
     image: autonomousDashboardImage,
-    imageAlt: 'Autonomous Labs dashboard screenshot',
+    imageAlt: 'Autonomous Labs dashboard screenshot with example data',
     githubUrl: 'https://github.com/JohnnyvonH/autonomous-labs-local',
     caseStudy: {
       problem: 'Lab telemetry and multimodal data can fragment across files, tools, and alert channels.',
