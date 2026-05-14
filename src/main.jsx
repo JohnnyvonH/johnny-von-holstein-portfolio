@@ -2,7 +2,7 @@
 import { createRoot } from 'react-dom/client';
 import { ArrowRight, ChevronDown, Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import './styles.css';
-import financeTrackerImage from './assets/finance-tracker-live.png';
+import financeTrackerImage from './assets/finance-tracker-dashboard.png';
 import wildlifeDashboardImage from './assets/wildlife-dashboard.png';
 import autonomousDashboardImage from './assets/autonomous-dashboard.png';
 
@@ -15,7 +15,7 @@ const projects = [
       'A full-stack personal finance application for tracking income, expenses, budgets, recurring transactions, savings goals, and financial reports with a React UI and cloud sync.',
     stack: ['React', 'Vite', 'Supabase', 'GitHub Pages'],
     image: financeTrackerImage,
-    imageAlt: 'Finance Tracker dashboard screenshot',
+    imageAlt: 'Finance Tracker dashboard screenshot with demo data',
     githubUrl: 'https://github.com/JohnnyvonH/financial-tracker',
     caseStudy: {
       problem: 'Personal finance data is easy to enter but hard to turn into useful habits.',
